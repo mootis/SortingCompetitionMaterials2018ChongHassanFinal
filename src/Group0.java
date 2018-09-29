@@ -87,27 +87,22 @@ public class Group0 {
 
 		@Override
 		public int compare(Data s1, Data s2) {
-			
-			String best1=s1.
-			long product1 = n1.primesProduct;
-			long product2 = n2.primesProduct;
-			
-			int result = 0;
-			if (product1 < product2) {
-				result = -1;
-			} else if (product1 > product2) {
-				result = 1;
-			} else if (n1.number < n2.number) {
-				result = -1;				
-			} else if (n1.number > n2.number) {
-				result = 1;
-			}
-			
-			return result;	
+			/* Length test */
+			if(s1.M_LRMUSLength() < s2.M_LRMUSLength()){return -1;}
+			if(s1.M_LRMUSLength() > s2.M_LRMUSLength()){return 1;}
+
+			/* Position test*/
+			if(s1.M_LRMUSPosition() < s2.M_LRMUSPosition()){return -1;}
+			if(s1.M_LRMUSPosition() > s2.M_LRMUSPosition()){return 1;}
+
+			/* Alphabetical test */
+			int tmp = s1.M_LRMUSStr().compareTo(s2.M_RMUSSstr());
+			if(tmp(!=0)){return(tmp);}
+
+			/* Fallback */
+			return(tmp = s1.value().compareTo(s2.value()))
 		}
-		
-	}
-	
+	}	
 	private static class Data {
 		private class LRMUS{
 			int position=-1;
@@ -169,6 +164,10 @@ public class Group0 {
 			
 			testItem=new LRMUS("Morrocco");
 			testItem$findBest();
+			System.out.println(testItem.M_LRMUSLength());
+			System.out.println(testItem.M_LRMUSPosition());
+			System.out.println(testItem.M_LRMUSStr());
+			System.out.println(testItem.value());
 
 /*			if (productOfPrimeFactors(1) != 1) { // definition for 1
 				System.out.println("fails on 1");
