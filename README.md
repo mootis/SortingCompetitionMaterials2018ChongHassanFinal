@@ -6,7 +6,7 @@ Materials for UMM CSci 3501 "Algorithms and computability" 2018 sorting competit
 * [Goal of the competition](#goal)
 * [The data](#data)
 * [How is the data generated](#generating)
-* [String Feature Background](#stringbackground}
+* [String Feature Background](#stringbackground)
 * [How do you need to sort the data](#sortingRules)
 * [Setup for sorting](#setup)
 * [Submision deadlines](#deadlines)
@@ -148,3 +148,4 @@ Be prepared to answer questions.
 
 ## Final write-up <a name="writeup"></a>
 
+*details will be posted here*
