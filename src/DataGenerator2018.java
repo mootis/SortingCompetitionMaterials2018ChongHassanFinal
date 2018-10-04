@@ -25,7 +25,7 @@ public class DataGenerator2018 {
         corpus=new String(Files.readAllBytes(Paths.get("corpus.txt"))); //I've hardwired in the corpus.txt requirement... bad Peter!
         makeSet("data0.txt",10000);
         makeSet("data1.txt",10000);
-        makeSet("data1.txt",10000);
+        makeSet("data2.txt",10000);
 
     }
 
