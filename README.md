@@ -106,7 +106,7 @@ Your program must print **the only value**, which is the **time** (as it current
 
 See Canvas for the deadlines of this competition (if you're not in the class I'll send you a copy via email).
 
-*Thursday, Oct 19* in the lab (2pm) is the *final* competition. All source code is posted immediately after that. Those in class will have their names revealed, others may choose to remain anonymous (but the code will still be posted). 
+*Thursday, Oct 25* in the lab is the *final* competition. All source code is posted immediately after that. Those in class will have their names revealed, others may choose to remain anonymous (but the code will still be posted). 
 
 ## Scoring <a name="scoring"></a>
 
@@ -125,6 +125,7 @@ I will post a script for running this program (with a correctness check and all)
 
 ## Results of the first preliminary round <a name="round1"></a>
 
+This round will occur October 11th 2018
 *Result of the first round will be posted here*
 
 ## Results of the competition <a name="final"></a>
@@ -133,7 +134,7 @@ I will post a script for running this program (with a correctness check and all)
 
 ## Presentations <a name="presentation"></a>
 
-The presentations date will be announced later. Each group needs to submit a
+The presentations date will November 1st . Each group needs to submit a
 set of 4-5 pdf slides by 11:59pm the day before the presentation; you will have 3-4 minutes to present. Both group members must be a part of a presentation. The presentation must have:
 
 * Your names (first names ok since this will be on github) and group number,
