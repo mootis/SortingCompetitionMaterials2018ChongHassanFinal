@@ -23,7 +23,7 @@ The Sorting Competition is a multi-lab exercise on developing the fastest sortin
 
 ## The data  <a name="data"></a>
 
-Data for this sorting oompetition consists of standard UTF-8 character strings of length 100 to 1000 characters passed to the sorting method as an array of strings.  The strings will be randomly selected from the file `corpus.txt` (available on this repo) which is comprised of the ASCII versions of the works of Arthur Conan Doyle and the complete works of Shakespeare.  In the first file source all newlines have been converted to spaces, and in the second, all newlines and tabs have been converted to spaces. The initial files were downloaded from https://sherlock-holm.es/stories/plain-text/cnus.txt and https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt respectively.  
+Data for this sorting competition consists of standard UTF-8 character strings of length 100 to 1000 characters passed to the sorting method as an array of strings.  The strings will be randomly selected from the file `corpus.txt` (available on this repo) which is comprised of the ASCII versions of the works of Arthur Conan Doyle and the complete works of Shakespeare.  In the first file source all newlines have been converted to spaces, and in the second, all newlines and tabs have been converted to spaces. The initial files were downloaded from https://sherlock-holm.es/stories/plain-text/cnus.txt and https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt respectively.  
 
 
 ## How is the data generated <a name="generating"></a>
