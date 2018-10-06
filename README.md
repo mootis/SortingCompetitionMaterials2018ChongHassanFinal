@@ -64,14 +64,14 @@ then only `the al` is an M-LRMUS.
 The strings are compared as follows
 
 1. The one with the shortest (M-LRMUS) comes first
-2. In the event of a tie, the string with the left-most LRMUS comes first
-3. In the event of a tie, the string whose LRMUS is alphabetically earliest comes first
+2. In the event of a tie, the string with the left-most M-LRMUS comes first
+3. In the event of a tie, the string whose M-LRMUS is alphabetically earliest comes first
 4. In the event of a tie, the normal alphabetical ordering determines which comes first
 
 For instance:
 
-* `Zunzibar` comes before `rorocco` since the length of the shortest M-LRMUS in `Zunzibar` is 1, but in `rorocco` it is 2.
-* `Zunzibar` comes before `rOrocco`:  although both have a shortest M-LRMUS of 1, The left-most LRMUS in `Zanzibar` is Z in position 1 and the left-most LRMUS in `rOrocco` is `O` which appears in position 2.
+* `Zunzibar` comes before `rorocco` since the length of the M-LRMUS's in `Zunzibar` are 1, but in `rorocco` it is 3.
+* `rorocco` comes before `abarbah`:  because although both have M-LRMUS of 3, The left-most LRMUS in `rorocco` is `ror` in position 0 and the left-most LRMUS in `abarbah` is `bar` which appears in position 1.
 * `Zunzibar` comes after `Africa`:   The left-most M-LRMUS in the first string is `Z` in position 1 and it is `A`, also in position 1, in the second.  Since `A` comes before `Z`.
 * `Aunzibar` comes after `Africa`:  Both have the same left-most M-RLMUS of `A` in position 1.  So we revert to normal alphabetical order. 
 
