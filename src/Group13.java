@@ -1,20 +1,17 @@
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Scanner;
 import java.util.List;
 
-public class Group0 {
+public class Group13 {
 
         public static void main(String[] args) throws InterruptedException, FileNotFoundException,IOException {
                 // testing the comparator:
-                Data.testM_LRMUS();
+                //Data.testM_LRMUS();
 
 
                 if (args.length < 2) {
@@ -34,9 +31,9 @@ public class Group0 {
 
                 String [] toSort = data.clone();
 
-                System.out.println("Beginning sort...");
+                //System.out.println("Beginning sort...");
                 Data [] sorted = sort(toSort);
-                System.out.println("done");
+                //System.out.println("done");
 
 
                 toSort = data.clone();
@@ -50,17 +47,13 @@ public class Group0 {
                 long end = System.currentTimeMillis();
 
                 System.out.println(end - start);
-                System.out.print("\tExporting sorted data to "+outFileName+"...");
+                //System.out.print("\tExporting sorted data to "+outFileName+"...");
                 writeOutResult(sorted, outFileName);
-                System.out.println("done!");
+                //System.out.println("done!");
 
         }
 
         // YOUR SORTING METHOD GOES HERE.
-        // You may call other methods and use other classes.
-        // Note: you may change the return type of the method.
-        // You would need to provide your own function that prints your sorted array to
-        // a file in the exact same format that my program outputs
         private static Data[] sort(String[] toSort) {
                 Data[] toSortData = new Data[toSort.length];
                 //System.out.print("\tBeginning Initialization...");
@@ -130,7 +123,7 @@ public class Group0 {
         private static class Data {
                 private class LRMUS{
                         public int position=Integer.MAX_VALUE; // Initial Position is as bad as possible
-                        public int length=Integer.MIN_VALUE;                   // Initial Length is as bad as possible
+                        public int length=Integer.MIN_VALUE;   // Initial Length is as bad as possible
                         public String referenceStr;
 
                         public LRMUS(String str){
@@ -216,6 +209,7 @@ public class Group0 {
                         best.findBest(); // Updates best so it contains the best LRMUS
                 }
 
+                /*
                 public static void testM_LRMUS() {
 
                         Data testItem,testItem2;
@@ -259,7 +253,7 @@ public class Group0 {
 
                         System.out.println("---");
                 }
-
+                */
         }
 
 }
