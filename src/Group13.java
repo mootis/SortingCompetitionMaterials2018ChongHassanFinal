@@ -35,6 +35,15 @@ public class Group13 {
                 Data [] sorted = sort(toSort);
                 //System.out.println("done");
 
+                // Used for quicksort
+                /*
+                Data[] toSortData = new Data[toSort.length];
+                for (int i = 0; i < toSort.length; ++i) {
+                        toSortData[i] = new Data(toSort[i]);
+                }
+
+                Data[] sorted = new Data[toSort.length];
+                */
 
                 toSort = data.clone();
 
@@ -43,6 +52,10 @@ public class Group13 {
                 long start = System.currentTimeMillis();
 
                 sorted = sort(toSort);
+
+                // Used for quicksort
+                // quicksort(toSortData, 0, toSort.length -1);
+
 
                 long end = System.currentTimeMillis();
 
@@ -70,7 +83,48 @@ public class Group13 {
                         System.out.println(Arr[i]);
                 }
         }
+
+        /*
+        // Attempted quicksort implementation
+        // Current issue is sorts but only line by line in alphabetical order. Does not consider the LRMUS
+
+        public static void quicksort(Data[] quickArray, int start, int end){
+        if (start < end){
+            int q = partition(quickArray, start, end);
+            quicksort(quickArray, start, q-1);
+            quicksort(quickArray, q+1, end);
+                }
+        }
+
+        public static int partition(Data[] partArray, int start, int end){
+        Data x = partArray[end];
+        int i = start - 1;
+
+        for (int count = start; count <= end - 1; count++){
+            if (partArray[count].value().compareTo(x.value()) <= 0){
+                i++;
+                exchange(i, count, partArray);
+            }
+        }
+
+        exchange(i+1, end, partArray);
+
+        return i+1;
+        }
+
+        // Exchange - swap two elements in an array
+        public static void exchange(int arrayPositionOne, int arrayPositionTwo, Data[] Array){
+        Data temp = Array[arrayPositionOne];
+        Array[arrayPositionOne] = Array[arrayPositionTwo];
+        Array[arrayPositionTwo] = temp;
+        }
+         */
+
         private static String[] readData(String inFile) throws FileNotFoundException,IOException {
+                // Unable to find a way to implement the commented out code but suspect that it may have something to do
+                // with the original being poorly optimized
+                // David
+
                 //ArrayList<String> input = new ArrayList<>();
 
                 //List<String> input = FileUtils.readLines(new File(inFile));
@@ -138,6 +192,28 @@ public class Group13 {
 
                                         int m=toMatch.length();
                                         if (m<length){ // If the string to match is shorter than our current best then we should skip to the next iteration
+
+                                                // Attempted a few things here like
+                                                /*
+                                                if (m < length){
+                                                continue;
+                                                } else if (m > length){
+                                                break;
+                                                }
+
+                                                OR
+
+                                                if (m > length){
+                                                break;
+                                                } else {
+                                                continue;
+                                                }
+                                                 */
+                                                // Both of these attempts resulted in not being able to access lines following so the code would not
+                                                // compile as well as other similar variants causing the data to be output incorrectly even with pointing
+                                                // to break first outside the for loop
+                                                // David
+
                                                 continue;
                                                 //break; // If the string to match is shorter than our current best length there's no reason to continue
                                         }
@@ -162,9 +238,9 @@ public class Group13 {
                                 }
                         }
                         public void findBest(){
-                 for(int i =0; i< referenceStr.length();i++){
-                   updateAt(i); //
-                     }
+                            for(int i =0; i< referenceStr.length();i++){
+                            updateAt(i); //
+                            }
                         }
                         public String getLRMUS() {
                                 if(referenceStr==null) {
@@ -199,6 +275,11 @@ public class Group13 {
                 public String M_LRMUSStr() {return best.getLRMUS();}
                 public String value(){return string;}
                 /*public void findBestLRMUS() {
+
+                        // I believe this may have something to do with the starter code being non optimized
+                        // Unsure the significant difference between public data below and this though
+                        // David
+
                         best = new LRMUS(string);
                         best.findBest(); // Updates best so it contains the best LRMUS
                 }*/
@@ -209,6 +290,8 @@ public class Group13 {
                         best.findBest(); // Updates best so it contains the best LRMUS
                 }
 
+                // Had to comment out in order to get the output to be correct
+                // David
                 /*
                 public static void testM_LRMUS() {
 
